@@ -1,10 +1,6 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Routes } from "../../routes";
 
 export function Main() {
-  return (
-    <View>
-      <Text> PlantApp</Text>
-    </View>
-  );
+  return <Routes />;
 }
