@@ -1,4 +1,4 @@
-export default globalStyles = {
+export default {
   colors: {
     gray: {
       light: "#D2D3DC",
