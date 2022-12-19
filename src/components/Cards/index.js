@@ -2,6 +2,7 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import globalStyles from "../../styles/global";
+import data from "../../mock/plants";
 
 export function Cards() {
   const { colors, fonts, spacing, size } = globalStyles;
@@ -11,6 +12,7 @@ export function Cards() {
         <Text style={styles.headerText}> New Plants 2 </Text>
         <Ionicons name="expand" size={18} color="#fff" />
       </View>
+      <FlatList data={data} keyExtractor={(element) => element.id} />
     </View>
   );
 }
