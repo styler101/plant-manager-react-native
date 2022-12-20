@@ -1,28 +1,31 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import globalStyles from "../../styles/global";
 
 export function Card(props) {
   const { item, handleSelectedCard, selectedCard } = props;
-
+  const navigate = useNavigation();
   return (
-    <View style={styles.card}>
-      <AntDesign
-        name="heart"
-        size={16}
-        color={selectedCard === item.id ? "red" : "#ccc"}
-        style={styles.icon}
-        onPress={() => handleSelectedCard(item.id)}
-      />
-      <Image
-        source={{
-          uri: item.image,
-        }}
-        style={styles.cardImge}
-      />
-      <Text style={styles.text}> {item.name}</Text>
-    </View>
+    <TouchableOpacity onPress={() => navigate.navigate("Cube")}>
+      <View style={styles.card}>
+        <AntDesign
+          name="heart"
+          size={16}
+          color={selectedCard === item.id ? "red" : "#ccc"}
+          style={styles.icon}
+          onPress={() => handleSelectedCard(item.id)}
+        />
+        <Image
+          source={{
+            uri: item.image,
+          }}
+          style={styles.cardImge}
+        />
+        <Text style={styles.text}> {item.name}</Text>
+      </View>
+    </TouchableOpacity>
   );
 }
 

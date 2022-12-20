@@ -32,7 +32,7 @@ export function Routes() {
         />
         <TabNavigation.Screen
           name="Cube"
-          component={Home}
+          component={Details}
           options={{
             tabBarIcon: () => (
               <Ionicons name="cube-outline" size={18} color="#ccc" />

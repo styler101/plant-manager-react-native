@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import global from "../../styles/global";
 
 export function Topics() {
-  const [showArea, setShowArea] = React.useState(false);
+  const [showArea, setShowArea] = React.useState(true);
 
   return (
     <View style={styles.mainContent}>
@@ -83,15 +83,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     img1: {
-      width: 150,
-      height: 150,
+      width: 130,
+      height: 130,
       borderRadius: 20,
       resizeMode: "contain",
     },
 
     img2: {
-      width: 150,
-      height: 150,
+      width: 130,
+      height: 130,
       borderRadius: 20,
       resizeMode: "contain",
     },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     height: 320,
 
     img: {
-      width: 200,
+      width: 180,
       height: 320,
       resizeMode: "contain",
       borderRadius: 20,
